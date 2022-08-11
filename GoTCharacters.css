@@ -1,0 +1,384 @@
+/* Hunter Ventura 11.29.2021 CIT 125-Final Project */
+
+
+/* media query for desktop viewport */
+@media screen and (min-width: 1024px) {
+
+* {
+	margin:  0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.mobileheader {
+	display: none;
+}
+
+/* link for background image: https://artoftravel.tips/the-real-life-locations-of-game-of-thrones-you-can-visit-wip/ */
+.banner {
+
+	width: 100%;
+	height: 100vh;
+	/* next line of code fades background image to make overlaying text more visible */
+	background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('GoTCB.png');
+	background-size: cover;
+	background-position: center;
+	overflow-x: scroll; /* this and one below are very important to prevent tablet viewport from breaking */
+	overflow-y: scroll;
+}
+
+.navbar {
+	width: 85%;
+	margin: auto;
+	padding: 35px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar ul li {
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+
+.navbar ul li a {
+
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+}
+
+.navbar ul li::after {
+	content: '' ;
+	height:  3px;
+	width: 0;
+	background: #CD7F32;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+
+}
+
+.navbar ul li:hover::after {
+	width:  100%;
+}
+
+/* Below is styling for video class only used on 'Watch Scene' Page */
+.iframe-container {
+
+	/* the code below centers the youtube video on the page */
+	position: absolute;
+	top: 55%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); 
+}
+
+.CharacterPic {
+
+	position: absolute;
+	left: 40px;
+	width: 40%;
+	height: 44%;
+	padding: 15px;
+	top: 25%;
+}
+
+/* this styling below is for the character pics that were squished */
+.CharacterPic2 {
+
+	position: absolute;
+	left: 40px;
+	width: 39%;
+	height: 48%;
+	padding: 15px;
+	top: 25%;
+}
+
+.content {
+	width: 43%;
+	display: block;
+	position: relative;
+	color: white;
+	left: 275px; /* moves content to right IF position is relative or absolute */
+	margin: 1rem auto;
+	padding: 2rem;
+	text-align: justify;
+	transition: all 0.3s;
+	overflow-x: scroll; /* overflow x and y allow user to scroll left and right and up and down to prevent white space bug */
+	overflow-y: scroll;
+}
+
+/* more styling for paragraph */
+.content p {
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+    word-spacing: 1px;
+}
+
+/* Below is the styling for the first letter styling for each character p tag */
+.content p:first-of-type::first-letter {
+
+    color:#CD7F32;
+    font-weight: bold;
+    font-size: 60px;
+    float: left;
+    line-height: 50px;
+    padding-right: 8px;
+    margin-top: -3px;
+}
+
+h1 {
+	color: white;
+}
+
+}
+
+/* media query for tablet viewport */
+
+@media screen and (max-width: 1023px)
+	and (min-width: 768px)
+ {
+
+* {
+	margin:  0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.mobileheader {
+	display: none;
+}
+
+/* link for background image: https://artoftravel.tips/the-real-life-locations-of-game-of-thrones-you-can-visit-wip/ */
+.banner {
+
+	width: 100%;
+	height: 100vh; /* height must be set to 100vh or the banner image wont fit the page on tablet view */
+	background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('GoTCB.png');
+	background-size: cover;
+	background-position: center;
+	overflow-x: scroll; /* this and one below are very important to prevent tablet viewport from breaking */
+	overflow-y: scroll;
+}
+
+.navbar {
+	width: 100%;
+	margin: auto;
+	padding: 30px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar ul li {
+	list-style: none;
+	display: inline-block;
+	margin: 0 15px;
+	position: relative;
+}
+
+.navbar ul li a {
+
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+}
+
+.navbar ul li::after {
+	content: '' ;
+	height:  3px;
+	width: 0;
+	background: #CD7F32;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.6s;
+
+}
+
+.navbar ul li:hover::after {
+	width:  100%;
+}
+
+/* The code in the next two classes allows the youtube video to be responsive */
+.iframe-container {
+
+	position: relative;
+	width: 100%; 
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow-y: scroll;
+}
+
+.iframe-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+.CharacterPic {
+
+	position: absolute;
+	left: 40px;
+	width: 45%;
+	height: 45%;
+	padding: 15px;
+	top: 25%;
+}
+
+/* this styling below is for the character pics that were squished */
+.CharacterPic2 {
+
+	position: absolute;
+	left: 40px;
+	width: 45%;
+	height: 48%;
+	padding: 15px;
+	top: 25%;
+}
+
+.content {
+
+	width: 43%;
+	display: block;
+	position: relative;
+	color: white;
+	left: 275px; /* moves content to right IF position is relative or absolute */
+	margin: 1rem auto;
+	padding: 2rem;
+	text-align: justify;
+	transition: all 0.3s;
+	overflow-x: scroll; /* overflow x and y allow user to scroll left and right and up and down to prevent white space bug */
+	overflow-y: scroll;
+}
+
+/* more styling for paragraph */
+.content p {
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+    word-spacing: 1px;
+}
+
+/* Below is the styling for the first letter styling for each character p tag */
+.content p:first-of-type::first-letter {
+
+    color:#CD7F32;
+    font-weight: bold;
+    font-size: 60px;
+    float: left;
+    line-height: 50px;
+    padding-right: 8px;
+    margin-top: -3px;
+}
+
+h1 {
+	color: white;
+}
+
+}
+
+
+/* Start of media query for mobile viewport */
+
+@media screen
+	and (max-width: 767px) {
+
+/* This isn't showing up but I'm hoping I can use this to make the Mobile viewport have the logo on top above nav */
+
+.mobileheader {
+
+	width: 100%;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+body {
+
+	background-color: black;
+}
+
+/* Style for nav specifies text properties */
+.navbar {
+	font-family: sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* Style specifies padding and margins for unordered list */
+.navbar ul {
+	padding:  0;
+	margin-top: 0.5em;
+	margin-bottom:  0.5em;
+}
+
+/* Style for nav link specifies the background color, rounded corners, removes bullets, 
+and applies margins and adding for list items in nav */
+.navbar li {  
+
+	background-color: #CD7F32;
+	border-radius: 1em;
+	list-style-type: none;
+	margin: 0.4em;
+	padding:  0.4em;		
+}
+
+/* Style changes nav link text color to white and removes the undeline */
+.navbar li a {
+	color: white;
+	text-decoration: none;
+}
+
+.content {
+	display: block;
+	position: relative;
+	color: white;
+	margin: auto;
+	padding: 2rem;
+	text-align: justify;
+}
+
+.content p {
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+    word-spacing: 1px;
+    font-weight: bold;
+}
+
+/* The code in the next two classes allows the youtube video to be responsive */
+.iframe-container {
+
+	position: relative;
+	width: 100%; 
+	padding-bottom: 56.25%;
+	height: 0;
+}
+
+.iframe-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* helps to create flexible and fluid images */
+img {
+
+	max-width: 100%;
+}
+
+
+/* Style displays the mobile class */
+.mobile {
+	display:  inline;
+}
+
+}
